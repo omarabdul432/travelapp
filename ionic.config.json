@@ -1,0 +1,7 @@
+{
+  "name": "travelapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
