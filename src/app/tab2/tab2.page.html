@@ -1,17 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar class="ion-padding-horizontal">
+    <ion-title color="light ion-no-padding" style="font-size: 30px;font-weight: bolder;">Wayz</ion-title>
+    <ion-avatar slot="end" class="ion-padding"><img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlie4MsQ9pJSSKY7DoEpxn3uBAq-rT7in1sA&s" alt=""
+        class=""></ion-avatar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-toolbar color="transparent ion-margin-top">
+    <ion-title class="ion-text-start ion-padding-horizontal">Favourites</ion-title>
+  </ion-toolbar>
+  @for (item of favourites; track $index) {
+  <ion-card>
+    <ion-img [src]="item.imgURL" alt="" class="ion-padding"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{item.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="ion-text-end">
+      <ion-button color="danger" (click)="remove(item)">Remove</ion-button>
+      <ion-button color="secondary" id="loader" [routerLink]="['details/'+item.id]">View Details</ion-button>
+      <ion-loading trigger="loader" message="Loading" [duration]="3000" spinner="circles"></ion-loading>
+    </ion-card-content>
+  </ion-card>
+  }
 </ion-content>

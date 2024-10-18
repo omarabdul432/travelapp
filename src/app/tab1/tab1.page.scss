@@ -1,0 +1,13 @@
+ion-content{
+    ion-searchbar{
+       --border-radius: 25px;
+    }
+    div{
+        text-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        ion-chip.chip-selected{
+            color: var(--ion-color-primary);
+        }
+    }
+}

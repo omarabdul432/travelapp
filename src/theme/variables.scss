@@ -1,2 +1,24 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+:root {
+	--ion-color-primary: #28588F;
+	--ion-color-primary-rgb: 40,88,143;
+	--ion-color-primary-contrast: #ffffff;
+	--ion-color-primary-contrast-rgb: 255,255,255;
+	--ion-color-primary-shade: #234d7e;
+	--ion-color-primary-tint: #3e699a;
+
+	--ion-color-secondary: #9EE4FF;
+	--ion-color-secondary-rgb: 158,228,255;
+	--ion-color-secondary-contrast: #000000;
+	--ion-color-secondary-contrast-rgb: 0,0,0;
+	--ion-color-secondary-shade: #8bc9e0;
+	--ion-color-secondary-tint: #a8e7ff;
+
+	--ion-color-tertiary: #E8F7FE;
+	--ion-color-tertiary-rgb: 232,247,254;
+	--ion-color-tertiary-contrast: #000000;
+	--ion-color-tertiary-contrast-rgb: 0,0,0;
+	--ion-color-tertiary-shade: #ccd9e0;
+	--ion-color-tertiary-tint: #eaf8fe;
+}

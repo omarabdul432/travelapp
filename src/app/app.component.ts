@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import { Platform } from '@ionic/angular'
+import { SplashScreen } from '@capacitor/splash-screen';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +10,12 @@ import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private platform: Platform) {
+    this.initializeApp()
+  }
+  initializeApp() {
+    this.platform.ready().then(() => {
+      SplashScreen.hide()
+    })
+  }
 }
